@@ -14,6 +14,7 @@
             <th>Team</th>
             <th>Comp</th>
             <th>Pass Att</th>
+            <th>Comp%</th>
             <th>Pass Yds</th>
             <th>Pass TD</th>
             <th>INT</th>
@@ -22,10 +23,10 @@
         </tr>
     </table>
     <h2>Update Passing Stats</h2>
-    <form>
-        <select name="Pick QB">
-            <option value="manning">Manning</option>
-            <option value="romo">Romo</option>
+    <form id="qbForm">
+        <select name="Pick QB" id="qbDropDown">
+            <option value="peytonManning">Manning</option>
+            <option value="tonyRomo">Romo</option>
         </select>
         <table class="addAttempt">
             <div>
@@ -33,16 +34,15 @@
                     <th class="addStatsForm">Enter new Pass Attempt</th>
                 </tr>
                 <tr>
+                    <select name="Pick passtype" id="passType">
+                        <option value="completions">Complete</option>
+                        <option value="incompletions">Inc</option>
+                        <option value="touchdowns">TD</option>
+                        <option value="interceptions">INT</option>
+                        <option value="sacks">Sack</option>
+                    </select>
                     <td class="addStatsForm">
-                        <input type="checkbox" name="option1" value="completion"> Complete?</td>
-                    <td class="addStatsForm">
-                        <input type="checkbox" name="option2" value="touchdown"> TD?</td>
-                    <td class="addStatsForm">
-                        <input type="checkbox" name="option3" value="interception"> INT?</td>
-                    <td class="addStatsForm">
-                        <input type="checkbox" name="option4" value="interception"> Sack?</td>
-                    <td class="addStatsForm">
-                        <input> Yards?</td>
+                        <input id="passYards"> Yards?</td>
                     <td class="addStatsForm">
                         <button>Add Pass Attempt</button>
                     </td>
@@ -57,6 +57,7 @@
             <th>Team</th>
             <th>Rush Att</th>
             <th>Rush Yds</th>
+            <th>Yds/Carry</th>
             <th>Rush TD</th>
             <th>1st Downs</th>
             <th>Rushes over 20yds</th>
@@ -65,8 +66,8 @@
         </tr>
     </table>
     <h2>Update Rushing Stats</h2>
-    <form>
-        <select name="Pick RB">
+    <form id="rbForm">
+        <select name="Pick RB" id="rbDropDown">
             <option value="lynch">Lynch</option>
             <option value="peterson">Peterson</option>
         </select>
@@ -75,15 +76,15 @@
                 <tr>
                     <th class="addStatsForm">Enter new Rush Attempt</th>
                 </tr>
-                <tr>
+                    <tr>
+                    <select name="Pick rushtype" id="rushType">
+                        <option value="rush">Rush</option>
+                        <option value="touchdowns">TD</option>
+                        <option value="fumbles">Fumble</option>
+                        <option value="firstDowns">1st Down</option>
+                    </select>
                     <td class="addStatsForm">
-                        <input type="checkbox" name="option1" value="touchdown">TD?</td>
-                    <td class="addStatsForm">
-                        <input type="checkbox" name="option2" value="interception">Fumble?</td>
-                    <td class="addStatsForm">
-                        <input type="checkbox" name="option3" value="interception">1st Down?</td>
-                    <td class="addStatsForm">
-                        <input> Yards?</td>
+                        <input id="rushYards"> Yards?</td>
                     <td class="addStatsForm">
                         <button>Add Rush Attempt</button>
                     </td>
@@ -97,27 +98,29 @@
             <th>Team</th>
             <th>K Made</th>
             <th>K Attempts</th>
+            <th>FG %</th>
             <th>Long Kick</th>
         </tr>
     </table>
     <h2>Update Kickings Stats</h2>
-    <form>
-        <select name="Pick K">
+    <form id="kForm">
+        <select name="Pick K" id="kDropDown">
             <option value="bailey">Bailey</option>
             <option value="crosby">Crosby</option>
         </select>
         <table class="addAttempt">
             <div>
                 <tr>
-                    <th class="addStatsForm">Enter new Rush Attempt</th>
+                    <th class="addStatsForm">Enter FG Attempt</th>
                 </tr>
                 <tr>
+                    <tr>
+                    <select name="Pick rushtype" id="kickType">
+                        <option value="made">Good</option>
+                        <option value="missed">No Good</option>
+                    </select>
                     <td class="addStatsForm">
-                        <input type="checkbox" name="option1" value="touchdown">Good</td>
-                    <td class="addStatsForm">
-                        <input type="checkbox" name="option2" value="touchdown">No Good</td>
-                    <td class="addStatsForm">
-                        <input> Yards?</td>
+                        <input id="kYards"> Yards?</td>
                     <td class="addStatsForm">
                         <button>Add FG Attempt</button>
                     </td>
