@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Football Stats</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
+</head>
+
+<body>
+    <h1>Quarterbacks</h1>
+    <table id="QB">
+        <tr>
+            <th>Player</th>
+            <th>Team</th>
+            <th>Comp</th>
+            <th>Pass Att</th>
+            <th>Pass Yds</th>
+            <th>Pass TD</th>
+            <th>INT</th>
+            <th>Sacks</th>
+            <th>Long Comp</th>
+        </tr>
+    </table>
+    <h2>Update Passing Stats</h2>
+    <form>
+        <select name="Pick QB">
+            <option value="manning">Manning</option>
+            <option value="romo">Romo</option>
+        </select>
+        <table class="addAttempt">
+            <div>
+                <tr>
+                    <th class="addStatsForm">Enter new Pass Attempt</th>
+                </tr>
+                <tr>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option1" value="completion"> Complete?</td>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option2" value="touchdown"> TD?</td>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option3" value="interception"> INT?</td>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option4" value="interception"> Sack?</td>
+                    <td class="addStatsForm">
+                        <input> Yards?</td>
+                    <td class="addStatsForm">
+                        <button>Add Pass Attempt</button>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </form>
+    <h1>Running Backs</h1>
+    <table id="RB">
+        <tr>
+            <th>Player</th>
+            <th>Team</th>
+            <th>Rush Att</th>
+            <th>Rush Yds</th>
+            <th>Rush TD</th>
+            <th>1st Downs</th>
+            <th>Rushes over 20yds</th>
+            <th>Long Rush</th>
+            <th>Fumbles</th>
+        </tr>
+    </table>
+    <h2>Update Rushing Stats</h2>
+    <form>
+        <select name="Pick RB">
+            <option value="lynch">Lynch</option>
+            <option value="peterson">Peterson</option>
+        </select>
+        <table class="addAttempt">
+            <div>
+                <tr>
+                    <th class="addStatsForm">Enter new Rush Attempt</th>
+                </tr>
+                <tr>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option1" value="touchdown">TD?</td>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option2" value="interception">Fumble?</td>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option3" value="interception">1st Down?</td>
+                    <td class="addStatsForm">
+                        <input> Yards?</td>
+                    <td class="addStatsForm">
+                        <button>Add Rush Attempt</button>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </form>
+    <table id="K">
+        <tr>
+            <th>Player</th>
+            <th>Team</th>
+            <th>K Made</th>
+            <th>K Attempts</th>
+            <th>Long Kick</th>
+        </tr>
+    </table>
+    <h2>Update Kickings Stats</h2>
+    <form>
+        <select name="Pick K">
+            <option value="bailey">Bailey</option>
+            <option value="crosby">Crosby</option>
+        </select>
+        <table class="addAttempt">
+            <div>
+                <tr>
+                    <th class="addStatsForm">Enter new Rush Attempt</th>
+                </tr>
+                <tr>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option1" value="touchdown">Good</td>
+                    <td class="addStatsForm">
+                        <input type="checkbox" name="option2" value="touchdown">No Good</td>
+                    <td class="addStatsForm">
+                        <input> Yards?</td>
+                    <td class="addStatsForm">
+                        <button>Add FG Attempt</button>
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </form>
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script type="text/javascript" src="/scripts/main.js"></script>
+</body>
+
+</html>
